@@ -67,12 +67,18 @@ document.querySelector('#divideNumbers').addEventListener('click', divideNumbers
 
 document.querySelector('#getTotal').addEventListener('click', selectFunction);
 
-function selectFunction(number) {
+function selectFunction(subTotal) {
 
-    const number = document.querySelector('#subtotal');
-    var checkbox = document.getElementById('member');
-    if (checkbox.checked)
+    const subTotal = document.querySelector('#subtotal');
+    const checkbox = document.getElementById('member');
+    if (checkbox.checked === true) {
+        let total = subTotal - (subTotal * 0.15);
+    }
+
+    return document.querySelector('#total').value = total.tofixed(2);
 }
+
+
 
 
 /* ARRAY METHODS - Functional Programming */
