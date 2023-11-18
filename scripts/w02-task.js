@@ -23,7 +23,7 @@ const imageElement = document.querySelector(`img`);
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = `${currentYear}`;
 imageElement.setAttribute('src' , profilePicture);
-imageElement.setAttribute('alt' , `Orimisan Eniayomi's Image`);
+imageElement.setAttribute('alt' , `<strong>Profile image of ${fullName}</strong>`);
 
 
 
