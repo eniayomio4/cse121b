@@ -69,13 +69,12 @@ document.querySelector('#getTotal').addEventListener('click', selectFunction);
 
 function selectFunction(subTotal) {
 
-    const subTotal = document.querySelector('#subtotal');
+    const subTotal = Number(document.querySelector('#subtotal').value);
     const checkbox = document.getElementById('member');
     if (checkbox.checked === true) {
-        let total = subTotal - (subTotal * 0.15);
+        return document.querySelector('#total').value = (subTotal - (subTotal * 0.15)).toFixed(2);
     }
 
-    return document.querySelector('#total').value = total.tofixed(2);
 }
 
 
