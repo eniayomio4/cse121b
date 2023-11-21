@@ -7,7 +7,7 @@ function add (number1, number2) {
     return  number1 + number2;
 }
 
-function addNumbers (addNumber1, addNumber2) {
+function addNumbers () {
     let addNumber1 = Number(document.querySelector('#add1').value);
     let addNumber2 = Number(document.querySelector('#add2').value);
 
@@ -23,11 +23,11 @@ const subtract = function (number1, number2) {
     return number1 - number2;
 }
 
-const subtractNumbers = function (subtractNumber1, subtractNumber2) {
+const subtractNumbers = function () {
     let subtractNumber1 = Number(document.querySelector('#subtract1').value);
     let subtractNumber2 = Number(document.querySelector('#subtract2').value);
 
-    return document.querySelector('#difference').value = add(subtractNumber1, subtractNumber2);
+    return document.querySelector('#difference').value = subtract(subtractNumber1, subtractNumber2);
 }
 
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
@@ -35,17 +35,17 @@ document.querySelector('#subtractNumbers').addEventListener('click', subtractNum
 /* Arrow Function - Multiply Numbers */
 
 multiply = (number1, number2) => {
-    number1 * number2;
+    return number1 * number2;
 } 
 
-multiplyNumbers = ( multiplyNumber1,  multiplyNumber2) => {
+multiplyNumbers = () => {
     let multiplyNumber1 = Number(document.querySelector('#factor1').value);
     let multiplyNumber2 = Number(document.querySelector('#factor2').value);
 
     return document.querySelector('#product').value = multiply(multiplyNumber1, multiplyNumber2);
 }
 
-document.querySelector('#multiplyNumbers').value.addEventListener('click', multiplyNumbers);
+document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
 
@@ -53,7 +53,7 @@ function divide (number1, number2) {
     return number1 / number2;
 }
 
-function divideNumbers (divideNumber1, divideNumber2) {
+function divideNumbers () {
     let divideNumber1 = Number(document.querySelector('#dividend').value);
     let divideNumber2 = Number(document.querySelector('#divisor').value);
 
@@ -67,7 +67,7 @@ document.querySelector('#divideNumbers').addEventListener('click', divideNumbers
 
 document.querySelector('#getTotal').addEventListener('click', selectFunction);
 
-function selectFunction(subTotal) {
+function selectFunction() {
 
     const subTotal = Number(document.querySelector('#subtotal').value);
     const checkbox = document.getElementById('member');
@@ -96,12 +96,12 @@ document.querySelector('#evens').innerHTML = array.filter(number => number % 2 =
 
 /* Output Sum of Org. Array */
 
-document.querySelector('#sumofArray').innerHTML = array.reduce((sum, number) => sum + number);
+document.querySelector('#sumOfArray').innerHTML = array.reduce((sum, number) => sum + number);
 
 /* Output Multiplied by 2 Array */
 
 document.querySelector('#multiplied').innerHTML = array.map(number => number * 2);
 
 /* Output Sum of Multiplied by 2 Array */
-let arrayMultiplied = array.map(number => number * 2);
-document.querySelector('#sumOfMultiplied').innerHTML = array.reduce((sum, arrayMultiplied) => sum + arrayMultiplied);
+const arrayMultiplied = array.map(number => number * 2);
+document.querySelector('#sumOfMultiplied').innerHTML = arrayMultiplied.reduce((sum, number) => sum + number);
